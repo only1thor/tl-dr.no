@@ -1,6 +1,7 @@
 ---
 title: "My First Page"
 ---
+![NixOS Logo](assets/nixos.png)
 
 # Page 1
 
