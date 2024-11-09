@@ -1,28 +1,9 @@
 # tl-dr.no
-These notes should not be to long, so i actually read them. 
-some test code:
-```python
-printf("whoop!")
-```
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-> This is a blockquote.
+---
 
+# Introduction
+These notes should not be to long, so i actually read them.
 
-## Subsection 2
-some text with `code` in it.
+The current plan is to orgainze destinct projects or topics in their own "chapters" (since this tool is ment to create books).
+And sub-chapters for smaller parts, like a pice of the project, or an attempt at a solution, that did not work out.
 
-## Subsection 3
-some text with **bold** and *italic* text.
-
-## Subsection 4
-some text with a [link](https://example.com).
-
-## Subsection 5
-an image:
-![NixOS Logo](img/nixos.png)
