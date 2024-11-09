@@ -8,9 +8,10 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
+    export TMP_DIR=$(mktemp -d)
     echo "##### Tips #####"
     echo "Start a local server:"
-    echo "  mdbook serve (mktemp -d) --open"
+    echo "  mdbook serve -d $TMP_DIR --open"
     echo "################"
     fish 
     echo "nix shell exited"
