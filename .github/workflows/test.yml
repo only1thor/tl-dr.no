@@ -41,7 +41,8 @@ jobs:
           mkdir bin public
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v$mdbook_version/mdbook-v$mdbook_version-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
           curl -sSL https://github.com/badboy/mdbook-mermaid/releases/download/v$mdbook_mermaid_version/mdbook-mermaid-v$mdbook_mermaid_version-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
-          bin/mdbook build -d public
+          export PATH=$PATH:$(pwd)/bin
+          mdbook build -d public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
