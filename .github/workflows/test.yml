@@ -1,4 +1,3 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy site to Pages
 
 on:
@@ -31,33 +30,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.128.0
+      mdbook_version: 0.4.42
+      mdbook_mermaid_version: 0.14.0
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - uses: actions/checkout@v3
-      - uses: cachix/install-nix-action@v18
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
-    
-      - name: Install Nix
-        uses: cachix/install-nix-action@v30
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
-          extra_nix_config: |
-            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-
-      - name: Use Nix Shell
-        uses: rrbutani/use-nix-shell-action@v1
-        with:
-          file: shell.nix
+        uses: actions/checkout@v4
       
-      - name: Run commands using shell environment
+      - name: Install mdBook, build the book
         run: |
-            mkdir -p public || cp -r assets public/
-            pandoc index.md -o index.html --template=bootstrap-dark.html -s
-            mv *.html public/
+          mkdir bin public
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v$mdbook_version/mdbook-v$mdbook_version-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+          curl -sSL https://github.com/badboy/mdbook-mermaid/releases/download/v$mdbook_mermaid_version/mdbook-mermaid-v$mdbook_mermaid_version-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+          bin/mdbook build -d public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

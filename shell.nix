@@ -2,16 +2,12 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    pandoc
-    python3Packages.pygments
+    mdbook
+    mdbook-mermaid
   ];
 
-#    export PANDOC_HIGHLIGHT_STYLE=dracula
   shellHook = ''
-    
-    alias md2html='pandoc index.md -o index.html --template=bootstrap-dark.html -s'
-
-    echo "Pandoc environment loaded with bootstrap-dark theme"
-    echo "Use 'md2html' to convert index.md to index.html"
+    echo "mdbook serve (mktemp -d)" to start a local server (bulid the book in a temporary directory)"
+    echo "add --open to open the browser"
   '';
 }
