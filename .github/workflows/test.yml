@@ -55,7 +55,7 @@ jobs:
       
       - name: Run commands using shell environment
         run: |
-            md2html && mkdir -p public && mv *.html public/
+            pandoc index.md -o index.html --template=bootstrap-dark.html -s && mkdir -p public && mv *.html public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
