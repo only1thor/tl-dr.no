@@ -12,6 +12,10 @@
 - [ ] secrets management with podman. (is an env file ok? maybe use bitwarden?)
 
 
+## The borgbackup nix service
+the options are well documented at [search.nix.org](https://search.nixos.org/options?channel=24.05&from=0&size=50&sort=relevance&type=packages&query=services.borgbackup.jobs.%3Cname%3E.), in [the nix manual](https://nixos.org/manual/nixos/stable/#module-borgbase), and [the wiki](https://wiki.nixos.org/wiki/Borg_backup)
+
+an example:
 ```nix 
   services.borgbackup.jobs."test-borgbase-backup" = {
     paths = [ 
