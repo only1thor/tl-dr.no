@@ -1,4 +1,5 @@
 # To do
+- borg recover non compacted, but deleted backups
 - secrets management (backup/restore - securely)
 - zfs snapshots
 - scheduled update nixOs (auto commit?, auto reboot + fail back?)
