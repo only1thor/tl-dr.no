@@ -16,7 +16,8 @@ graph TD;
         end
     end
     B --> R[Borgbase.net]
-    R --> Ntfy
+    R --if backups fail for
+        24h, notify phone--> Ntfy
     Ntfy --> C
     
     click Ntfy "https://ntfy.sh"
