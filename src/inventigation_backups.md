@@ -32,3 +32,7 @@ https://stackoverflow.com/questions/33713680/ssh-force-command-execution-on-logi
 https://at.magma-soft.at/sw/blog/posts/The_Only_Way_For_SSH_Forced_Commands/
 https://docs.ntfy.sh/
 https://docs.borgbase.com/setup/borg/
+https://arstechnica.com/gadgets/2021/06/a-quick-start-guide-to-openzfs-native-encryption/
+https://docs.oracle.com/cd/E19253-01/819-5461/gamnq/index.html
+https://jrs-s.net/2018/08/17/zfs-tuning-cheat-sheet/
+https://openzfs.github.io/openzfs-docs/man/master/8/zfs-send.8.html
