@@ -20,6 +20,10 @@ graph TD;
     Ntfy --> C
     
     click Ntfy "https://ntfy.sh"
+    click R "https://borgbase.com"
+    click T "https://traefik.io"
+    click B "https://nixos.org/manual/nixos/stable/#module-borgbase"
+    click N "https://syncthing.net"
 ```
 
 in addition to backing up regularly to Borgbase with the nix service, the ZFS dataset that contains the backup directory can use sanoid to snapshot regularly for local retention.
