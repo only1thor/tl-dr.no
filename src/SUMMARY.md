@@ -2,8 +2,7 @@
 [Intro](intro.md)
 - [Heimdall - NixOs + podman](./heimdall.md)
   - [NixOs](./nixos.md)
-- [Backups]
-  - [Backup architecture](./backups_portable.md)
+- [Backups](./backups_portable.md)
   - [BorgBackup](./BorgBackup.md)
   - [Attack recovery](./attack_recovery.md)
   - [Syncthing](./Syncthing.md)
